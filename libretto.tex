@@ -3,6 +3,10 @@
 \usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=3cm]{geometry}
 \usepackage[center]{titlesec}
 \usepackage{librebaskerville}
+\usepackage{array}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
 \titleformat{\section}
  {\huge\scshape\filcenter}{\thesection}{0pt}{\titlerule}[\titlerule]
 
@@ -13,7 +17,10 @@
 \begin{document} % Begins a document
   \maketitle
   
-  \clearpage 
+  \clearpage
+  \input{retro-prima.tex}
+  \clearpage
+  
 \section{Gli auguri di Don Mirco}
 Cari Maseradesi,
 
