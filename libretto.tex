@@ -10,6 +10,7 @@
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 \usepackage{makecell}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 \graphicspath{ {./images/} }
 
 \titleformat{\section}
@@ -20,8 +21,7 @@
 \author{}
 
 \begin{document} % Begins a document
-  \maketitle
-  
+  \includepdf[pages={1}]{copertina.pdf}
   \clearpage
   \input{retro-prima.tex}
   \clearpage
