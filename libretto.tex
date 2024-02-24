@@ -1,26 +1,36 @@
 \documentclass[a5paper,10pt]{article} % Starts an article
 \usepackage[utf8]{inputenc}
-\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=3cm]{geometry}
+\usepackage[left=1.5cm,right=1.5cm,top=1.2cm,bottom=2cm]{geometry}
 \usepackage[center]{titlesec}
 \usepackage{fouriernc}
 \usepackage{ragged2e}
 \usepackage{parskip}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{tabularray}
+\usepackage{booktabs}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\usepackage{makecell}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\graphicspath{ {./images/} }
+
 \titleformat{\section}
  {\Huge\scshape\filcenter}{\thesection}{0pt}{\titlerule}[\titlerule]
 
 \setcounter{secnumdepth}{0}
-\title{Costruire Comunità} % Title
+\title{}
 \author{}
-
 \begin{document} % Begins a document
-  \maketitle
-  
+  \includepdf[pages={1}]{copertina.pdf}
+  \clearpage
+  \input{retro-prima.tex}
   \clearpage 
 \begin{justify}
 \section{Gli auguri di Don Mirco}
 Cari Maseradesi,
 
-siamo giunti ormai a Natale, con la sua atmosfera di festa di serenità e di speranza, nonostante ci siano ancora guerre nel mondo.
+siamo giunti ormai a Natale, con la sua atmosfera di festa, di serenità e di speranza, nonostante ci siano ancora guerre nel mon-do.
 
 Il Natale di Cristo, ci riconduce al centro del mistero che segna uno spartiacque nel cammino verso l'incontro con Dio. Per molti anni gli uomini hanno cercato il suo volto, si sono posti in ascolto di una sua parola. Ed ecco Dio ci è venuto incontro, il cielo si è aperto ed  accaduto un straordinario evento, nella maniera pi impensabile per l'uomo. In una grotta poverissima,  nato il bambino divino, avvolto in fasce e deposto in una mangiatoia. Un segno normale attesta che Dio  venuto, ha assunto la fragilit della nostra carne, come segno del suo essere fra di noi, come rivelatore del Padre. I nostri schemi sono svaniti, perch Dio  presente nellinfinitamente piccolo, la sua parola un vagito di neonato, che si affida a un volto che gli sorrida, a una mano che lo accarezzi, a un seno che lo nutra. Contempliamo estasiati questo mistero che suscita tenerezza, amore gioia e festa per tutti. Cari amici, Gesù, desidera essere il centro di queste feste che suscitano sentimenti di bontà, di fraternit, di giustizia e di pace.
 
