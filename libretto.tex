@@ -13,27 +13,34 @@
 \usepackage{makecell}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{lipsum}
 \graphicspath{ {./immagini/} }
 
 \titleformat{\section}
  {\Huge\scshape\filcenter}{\thesection}{0pt}{\titlerule}[\titlerule]
 
+\titleformat{\subsection}
+ {\Large\scshape\filcenter}{\thesection}{0pt}{}[\titlerule]
+
 \setcounter{secnumdepth}{0}
-\title{}
-\author{}
 \newcommand{\firma}[1]
 {
     \begin{flushright}
     #1
     \end{flushright}
 }
-
 \newcommand{\sectionbreak}{\clearpage}
 
-\begin{document} % Begins a document
+
+\begin{document}
   \includepdf[pages={1}]{copertina.pdf}
   \clearpage
   \input{retro-prima.tex}
+  
   \input{struttura.tex}
+  
+  \clearpage
+  \phantom{La fine}
+  \thispagestyle{empty}
 \end{document}
 
