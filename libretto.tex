@@ -14,8 +14,15 @@
 \usepackage{makecell}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{fancyhdr}
 \usepackage{lipsum}
+
 \graphicspath{ {./immagini/} }
+
+\pagestyle{fancy}
+\fancyhf{}  % rimuove stile di default del pacchetto fancyhdr
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\rule[0.8ex]{0.4\textwidth}{0.4pt} \thepage \ \rule[0.8ex]{0.4\textwidth}{0.4pt}}
 
 \titleformat{\section}
  {\Huge\scshape\filcenter}{\thesection}{0pt}{\titlerule}[\titlerule]
