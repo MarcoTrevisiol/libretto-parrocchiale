@@ -1,3 +1,11 @@
+HOST=$(shell hostname)
+
+ifeq ($(HOST),LAPTOP-13UEV0F1)
+	GDRIVE=gdrive
+else
+	GDRIVE=gdrive_trevisioltess
+endif
+
 libretto.pdf: libretto.tex copertina.pdf copertina-retro.pdf retro-prima.tex struttura.tex
 	pdflatex $<
 
@@ -11,5 +19,5 @@ clean:
 	-rm *pdf *log *aux
 
 upload: libretto.pdf
-	rclone copyto --drive-shared-with-me libretto.pdf gdrive_trevisioltess:'Libretti Costruire Comunità/2024-04 Pasqua/Libretto-Pasqua-stato-attuale.pdf'
+	rclone copyto --drive-shared-with-me libretto.pdf $(GDRIVE):'Libretti Costruire Comunità/2024-04 Pasqua/Libretto-Pasqua-stato-attuale.pdf'
 
