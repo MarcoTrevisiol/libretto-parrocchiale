@@ -10,7 +10,6 @@
 \usepackage{tabularx}
 \usepackage{tabularray}
 \usepackage{booktabs}
-\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 \usepackage{makecell}
 \usepackage{graphicx}
 \usepackage{pdfpages}
@@ -18,6 +17,7 @@
 \usepackage{lipsum}
 
 \graphicspath{ {./immagini/} }
+\setcounter{secnumdepth}{0}
 
 \pagestyle{fancy}
 \fancyhf{}  % rimuove stile di default del pacchetto fancyhdr
@@ -30,7 +30,6 @@
 \titleformat{\subsection}
  {\Large\scshape\filcenter}{\thesection}{0pt}{}[\titlerule]
 
-\setcounter{secnumdepth}{0}
 \newcommand{\firma}[1]
 {
     \begin{flushright}
