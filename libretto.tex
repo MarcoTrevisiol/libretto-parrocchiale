@@ -1,10 +1,11 @@
 \documentclass[a5paper,10pt]{article} % Starts an article
 \usepackage[utf8]{inputenc}
-\usepackage[left=1.5cm,right=1.5cm,top=1.2cm,bottom=2cm]{geometry}
+\usepackage[main=italian]{babel}
+\usepackage[left=1.45cm,right=1.45cm,top=1.2cm,bottom=2cm]{geometry}
 \usepackage[center]{titlesec}
 \usepackage{fouriernc}
 \usepackage{ragged2e}
-\usepackage{parskip}
+\usepackage[indent]{parskip}
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{tabularray}
@@ -13,27 +14,34 @@
 \usepackage{makecell}
 \usepackage{graphicx}
 \usepackage{pdfpages}
-\graphicspath{ {./images/} }
+\usepackage{lipsum}
+\graphicspath{ {./immagini/} }
 
 \titleformat{\section}
  {\Huge\scshape\filcenter}{\thesection}{0pt}{\titlerule}[\titlerule]
 
+\titleformat{\subsection}
+ {\Large\scshape\filcenter}{\thesection}{0pt}{}[\titlerule]
+
 \setcounter{secnumdepth}{0}
-\title{}
-\author{}
 \newcommand{\firma}[1]
 {
     \begin{flushright}
     #1
     \end{flushright}
 }
-
 \newcommand{\sectionbreak}{\clearpage}
 
-\begin{document} % Begins a document
+
+\begin{document}
   \includepdf[pages={1}]{copertina.pdf}
   \clearpage
   \input{retro-prima.tex}
+  
   \input{struttura.tex}
+  
+  \clearpage
+  \phantom{La fine}
+  \thispagestyle{empty}
 \end{document}
 
