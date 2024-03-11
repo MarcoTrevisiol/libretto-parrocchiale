@@ -6,7 +6,7 @@ else
 	GDRIVE=gdrive_trevisioltess
 endif
 
-libretto.pdf: libretto.tex copertina.pdf copertina-retro.pdf retro-prima.tex struttura.tex
+libretto.pdf: libretto.tex copertina.pdf copertina-retro.pdf celebrazioni.tex struttura.tex
 	pdflatex $<
 
 %.pdf: %.svg
