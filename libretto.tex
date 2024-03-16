@@ -59,6 +59,11 @@
     \includegraphics[width=#1]{#2}
 \end{wrapfigure}
 }
+\newcommand{\vuota}
+{
+  \clearpage
+  \phantom{\hfill}
+}
 \captionsetup[figure]{labelformat=empty}% redefines the caption setup of the figures environment in the beamer class.
 
 
@@ -68,6 +73,7 @@
   \input{celebrazioni.tex}
   
   \input{struttura.tex}
+  \vuota
   \includepdf[pages={1}]{copertina-retro.pdf}
 \end{document}
 
