@@ -10,7 +10,7 @@ libretto.pdf: libretto.tex copertina.pdf copertina-retro.pdf celebrazioni.tex st
 	pdflatex $<
 
 libretto-book.pdf: libretto.pdf
-	pdfbook2 $<
+	pdfbook2 --paper=a4paper -s -n --resolution 300 $<
 
 %.pdf: %.svg
 	inkscape $< --export-area-page --export-filename=$@
