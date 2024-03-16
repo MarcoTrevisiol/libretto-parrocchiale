@@ -53,6 +53,13 @@
 \end{center}
 \vspace*{\fill}
 }
+\newcommand{\figuramedia}[2]
+{
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=#1]{#2}
+\end{figure}
+}
 \newcommand{\figurawrap}[2]
 {
 \begin{wrapfigure}{l}{#1}
@@ -62,6 +69,7 @@
 \newcommand{\vuota}
 {
   \clearpage
+  \thispagestyle{empty}
   \phantom{\hfill}
 }
 \captionsetup[figure]{labelformat=empty}% redefines the caption setup of the figures environment in the beamer class.
