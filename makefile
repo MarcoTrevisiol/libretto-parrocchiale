@@ -1,5 +1,7 @@
 HOST=$(shell hostname)
 DRIVE_FOLDER='Libretti Costruire Comunità/2024-04 Pasqua/'
+ARTICOLI=$(wildcard articoli/*.tex)
+IMMAGINI=$(wildcard immagini/*)
 
 ifeq ($(HOST),LAPTOP-13UEV0F1)
 	GDRIVE=gdrive
@@ -7,7 +9,7 @@ else
 	GDRIVE=gdrive_trevisioltess
 endif
 
-libretto.pdf: libretto.tex copertina.pdf copertina-retro.pdf celebrazioni.tex struttura.tex
+libretto.pdf: libretto.tex copertina.pdf copertina-retro.pdf celebrazioni.tex struttura.tex $(ARTICOLI) $(IMMAGINI)
 	pdflatex $<
 	pdflatex $<
 
