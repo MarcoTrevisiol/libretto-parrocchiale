@@ -23,7 +23,7 @@ libretto-book.pdf: libretto.pdf
 %.pdf: %.svg
 	inkscape $< --export-area-page --export-filename=$@
 
-copertina-retro.pdf: immagini/pergamena.jpg
+copertina-retro.pdf: immagini/retro.jpg
 copertina.pdf: immagini/copertina.jpg
 
 upload: libretto.pdf libretto-book.pdf
