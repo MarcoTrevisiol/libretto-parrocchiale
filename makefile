@@ -1,5 +1,5 @@
 HOST=$(shell hostname)
-DRIVE_FOLDER='Libretti Costruire Comunità/2024-06 Sagra/'
+DRIVE_FOLDER='Libretti Costruire Comunità/2024-12 Natale/'
 ARTICOLI=$(wildcard articoli/*.tex)
 IMMAGINI=$(wildcard immagini/*)
 STRUTTURA=$(patsubst %,\\input{%},$(ARTICOLI))
