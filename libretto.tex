@@ -20,6 +20,7 @@
 \usepackage{wrapfig}
 \usepackage{url}
 \usepackage{caption}
+\usepackage{multicol}
 \graphicspath{ {./immagini/} }
 \setcounter{secnumdepth}{0}
 
@@ -82,6 +83,18 @@
     \includegraphics[width=#1]{#2}
     \vspace{-5ex}
 \end{wrapfigure}
+}
+\newcommand{\figureafianco}[2]
+{
+  \begin{figure*}[!b]
+    \begin{minipage}{0.47\textwidth}
+      \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.47\textwidth}
+      \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+  \end{figure*}
 }
 \newcommand{\vuota}
 {
