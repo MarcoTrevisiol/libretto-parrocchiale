@@ -1,8 +1,10 @@
 output_dir="../immagini-std/"
 
+mkdir -p "${output_dir}"
+
 for i in *jpg
 do
-  mv "$i" "${output_dir}${i}"
+  cp "$i" "${output_dir}${i}"
 done
 
 for i in *png
