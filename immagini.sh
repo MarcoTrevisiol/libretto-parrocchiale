@@ -1,6 +1,7 @@
 output_dir="../immagini-std/"
 
 mkdir -p "${output_dir}"
+rm -f "${output_dir}"/*
 
 for i in *jpg
 do
