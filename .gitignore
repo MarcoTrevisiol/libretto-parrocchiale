@@ -300,6 +300,8 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 .*swp
+.*~
+*~
 struttura.tex
 immagini-originali
 immagini-std
