@@ -21,6 +21,8 @@ Sono necessari i seguenti programmi per far funzionare la compilazione del libre
 - pdfbook2
 - rclone
 
+Servono anche svariati pacchetti latex che dovrebbero essere facilmente installabili o usando il proprio sistema operativo o usando l'editor di latex.
+
 Occorre configurare rclone per per puntare alla cartella dove caricare il libretto compilato:
 
     rclone config
@@ -32,10 +34,17 @@ Inoltre è consigliato avere a disposizione un editor di latex (come a esempio k
 
 ## Istruzioni per l'uso
 
-Per compilare il libretto, dalla stessa cartella contenente tutto il libretto dare:
+Per creare un nuovo libretto per Natale, dalla stessa cartella contenente tutto il libretto, dare:
+
+    make natale
+
+similmente si può creare il libretto per pasqua o per sagra.
+
+Per compilare il libretto in pdf dare:
 
     make
 
 Per caricare su gdrive (e compilare anche in formato di stampa):
 
     make upload
+
