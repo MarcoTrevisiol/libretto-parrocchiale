@@ -1,7 +1,8 @@
 HOST=$(shell hostname)
 DRIVE_FOLDER='Libretti Costruire Comunità/2025-04 Pasqua/'
 ARTICOLI=$(wildcard articoli/*.tex)
-IMMAGINI=$(wildcard immagini/*)
+IMMAGINI_BASE=$(wildcard immagini/*)
+IMMAGINI=$(patsubst immagini/%.svg,immagini/%.pdf,$(IMMAGINI_BASE))
 STRUTTURA=$(patsubst %,\\input{%},$(ARTICOLI))
 ANNO=$(shell date '+%Y')
 ANNO_PROSSIMO=$(shell date --date='1 year' '+%Y')
