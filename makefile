@@ -1,17 +1,10 @@
 HOST=$(shell hostname)
-DRIVE_FOLDER='Libretti Costruire Comunità/2025-04 Pasqua/'
 ARTICOLI=$(wildcard articoli/*.tex)
 IMMAGINI_BASE=$(wildcard immagini/*)
 IMMAGINI=$(patsubst immagini/%.svg,immagini/%.pdf,$(IMMAGINI_BASE))
 STRUTTURA=$(patsubst %,\\input{%},$(ARTICOLI))
 ANNO=$(shell date '+%Y')
 ANNO_PROSSIMO=$(shell date --date='1 year' '+%Y')
-
-ifeq ($(HOST),LAPTOP-13UEV0F1)
-	GDRIVE=gdrive
-else
-	GDRIVE=gdrive_trevisioltess
-endif
 
 libretto.pdf: libretto.tex copertina.pdf copertina-retro.pdf celebrazioni.tex struttura.tex $(ARTICOLI) $(IMMAGINI)
 	pdflatex $<
@@ -29,9 +22,10 @@ libretto-book.pdf: libretto.pdf
 copertina-retro.pdf: immagini/retro.jpg
 copertina.pdf: immagini/copertina.jpg
 
-upload: libretto.pdf libretto-book.pdf
-	rclone copyto --drive-shared-with-me libretto.pdf $(GDRIVE):$(DRIVE_FOLDER)'Libretto-stato-attuale.pdf'
-	rclone copyto --drive-shared-with-me libretto-book.pdf $(GDRIVE):$(DRIVE_FOLDER)'Libretto-versione-stampa.pdf'
+upload: libretto.pdf libretto-book.pdf rclone-target.txt
+	TARGET=$$(cat $<); \
+	rclone copyto --drive-shared-with-me libretto.pdf "$${TARGET}/Libretto-stato-attuale.pdf" && \
+	rclone copyto --drive-shared-with-me libretto-book.pdf "$${TARGET}/Libretto-versione-stampa.pdf"
 
 define AUGURI
 \\section{Auguri di don Federico}
