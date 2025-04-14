@@ -17,7 +17,7 @@ libretto.pdf: libretto.tex copertina.pdf copertina-retro.pdf celebrazioni.tex st
 	pdflatex $<
 	pdflatex $<
 
-struttura.tex: $(ARTICOLI)
+struttura.tex: articoli
 	echo $(STRUTTURA) >$@
 
 libretto-book.pdf: libretto.pdf
