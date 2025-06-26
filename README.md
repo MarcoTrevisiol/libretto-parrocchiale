@@ -23,6 +23,8 @@ Sono necessari i seguenti programmi per far funzionare la compilazione del libre
 
 Servono anche svariati pacchetti latex che dovrebbero essere facilmente installabili o usando il proprio sistema operativo o usando l'editor di latex.
 
+Occorre anche installare i font del progetto (in `fonts/`) dentro al sistema in uso. In ambiente linux basta copiare tale cartella dentro `.local/share/fonts/` (che è dentro la propria home); in ambiente windows basta spostarli dentro `C:\Windows\Fonts` (oppure tasto destro + installa).
+
 Occorre configurare rclone per per puntare alla cartella dove caricare il libretto compilato:
 
     rclone config
