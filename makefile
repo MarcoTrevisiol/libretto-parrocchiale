@@ -41,9 +41,10 @@ nuovo_libretto: clean
 	-rm articoli/*tex
 	printf "$$AUGURI" >articoli/0-auguri-Don-Federico.tex
 	mkdir _immagini
-	cp immagini/angolo.png immagini/copertina.jpg immagini/logo.jpg immagini/retro.jpg _immagini
+	cp immagini/copertina.jpg immagini/logo.jpg immagini/retro.jpg _immagini
 	rm -r immagini
 	mv _immagini immagini
+	-cp modelli/$(modello)/angolo.png immagini/angolo.png
 	cp modelli/$(modello)/celebrazioni.tex celebrazioni.tex
 	cp modelli/$(modello)/copertina.svg copertina.svg
 	cp modelli/$(modello)/copertina-retro.svg copertina-retro.svg
