@@ -1,4 +1,3 @@
-HOST=$(shell hostname)
 ARTICOLI=$(wildcard articoli/*.tex)
 IMMAGINI_BASE=$(wildcard immagini/*)
 IMMAGINI=$(patsubst immagini/%.svg,immagini/%.pdf,$(IMMAGINI_BASE))
@@ -22,7 +21,7 @@ libretto-book.pdf: libretto.pdf
 copertina-retro.pdf: immagini/retro.jpg
 copertina.pdf: immagini/copertina.jpg
 
-upload: libretto.pdf libretto-book.pdf rclone-target.txt
+upload: rclone-target.txt libretto.pdf libretto-book.pdf
 	TARGET=$$(cat $<); \
 	rclone copyto --drive-shared-with-me libretto.pdf "$${TARGET}/Libretto-stato-attuale.pdf" && \
 	rclone copyto --drive-shared-with-me libretto-book.pdf "$${TARGET}/Libretto-versione-stampa.pdf"
