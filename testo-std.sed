@@ -20,4 +20,4 @@ s/\(.\) \+/\1 /g
 # cancella spazi a fine riga
 s/ \+$//
 # cancella spazi a inizio riga
-s/ \+\([^0-9A-Za-zèÈ`'<\\( -]\)/\1/g
+s/^ \+\([^0-9A-Za-zèÈ`'<\\( -]\)/\1/g
