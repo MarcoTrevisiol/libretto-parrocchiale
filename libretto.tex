@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[main=italian]{babel}
 \usepackage[left=1.45cm,right=1.45cm,top=1.2cm,bottom=2cm]{geometry}
-\usepackage{lmodern}
+\usepackage{lmodern} %font "computer modern"
 \usepackage[center]{titlesec}
 \usepackage{fouriernc}
 \usepackage{ragged2e}
@@ -17,11 +17,13 @@
 \usepackage{fancyhdr}
 \usepackage{gensymb}
 \usepackage{lipsum}
-\usepackage{ulem}
-\usepackage{wrapfig}
+\usepackage{ulem} %testo sbarrato
+\usepackage{wrapfig} %figure ravvicinate al testo
 \usepackage{url}
 \usepackage{caption}
 \usepackage{multicol}
+\usepackage{longtable} %tabella del bilancio
+\usepackage{booktabs} %migliora le tabelle
 \graphicspath{ {./immagini/} }
 \setcounter{secnumdepth}{0}
 
@@ -119,7 +121,7 @@
   \input{celebrazioni.tex}
   
   \input{struttura.tex}
-%   \vuota
+  \vuota
   \includepdf[pages={1}]{copertina-retro.pdf}
 \end{document}
 
