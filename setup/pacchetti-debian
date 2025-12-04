@@ -1,0 +1,9 @@
+make
+texlive-latex-base
+texlive-latex-extra
+texlive-lang-italian
+texlive-fonts-recommended
+texlive-fonts-extra
+texlive-extra-utils
+inkscape
+rclone

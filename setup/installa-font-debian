@@ -1,0 +1,8 @@
+#!/bin/sh
+
+fonts_dir=~/.local/share/fonts/
+
+mkdir -p "${fonts_dir}"
+cp fonts/* "${fonts_dir}"
+fc-cache -f "${fonts_dir}"
+fc-cache -fv
