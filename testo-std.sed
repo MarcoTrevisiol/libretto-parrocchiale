@@ -21,3 +21,5 @@ s/\(.\) \+/\1 /g
 s/ \+$//
 # cancella spazi a inizio riga
 s/^ \+\([^0-9A-Za-zèÈ`'<\\( -]\)/\1/g
+# cancella spazi prima di punteggiatura
+s/ \([,;:]\)/\1/g
