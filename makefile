@@ -41,7 +41,7 @@ copertina-retro.pdf: immagini/retro.jpg
 copertina.pdf: immagini/copertina.jpg
 
 upload: libretto.pdf libretto-book.pdf | $(RCLONE_TARGET)
-	TARGET=$$(cat $<); \
+	TARGET=$$(cat $(RCLONE_TARGET)); \
 	rclone copyto --drive-shared-with-me libretto.pdf "$${TARGET}/Libretto-stato-attuale.pdf" && \
 	rclone copyto --drive-shared-with-me libretto-book.pdf "$${TARGET}/Libretto-versione-stampa.pdf"
 
