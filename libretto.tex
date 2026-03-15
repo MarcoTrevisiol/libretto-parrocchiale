@@ -87,9 +87,21 @@
     \vspace{-5ex}
 \end{wrapfigure}
 }
-\newcommand{\figureafianco}[2]
+\newcommand{\figureafiancobase}[2]
 {
   \begin{figure*}[!b]
+    \begin{minipage}{0.47\textwidth}
+      \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.47\textwidth}
+      \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+  \end{figure*}
+}
+\newcommand{\figureafiancoqui}[2]
+{
+  \begin{figure*}[!h]
     \begin{minipage}{0.47\textwidth}
       \includegraphics[width=\textwidth]{#1}
     \end{minipage}
